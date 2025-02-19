@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkg0smw35p14c"]
+
+[ext_resource type="Texture2D" uid="uid://cvdf5fx67cps1" path="res://Scripts/turret_FACE.png" id="1_4uewy"]
+
+[node name="Turret" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -0.999996)
+scale = Vector2(6.08594, 3.30469)
+texture = ExtResource("1_4uewy")
+vframes = 10
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(823, 0)
