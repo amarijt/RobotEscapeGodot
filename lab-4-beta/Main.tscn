@@ -1,12 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://durifkeea3bpq"]
+[gd_scene load_steps=11 format=4 uid="uid://durifkeea3bpq"]
 
 [ext_resource type="PackedScene" uid="uid://dnfnjwurgfhjs" path="res://player.tscn" id="1_mqpb0"]
 [ext_resource type="Texture2D" uid="uid://eckl0wluvk1g" path="res://Sterile Factory.png" id="2_hnvav"]
 [ext_resource type="Texture2D" uid="uid://b3eu0gnrf6tqc" path="res://Screenshot 2025-02-13 024652.png" id="5_0um7y"]
-[ext_resource type="PackedScene" uid="uid://cqrjq0cydpjtu" path="res://Desk.tscn" id="5_17y3i"]
 [ext_resource type="Texture2D" uid="uid://xdkg2jn13agm" path="res://Screenshot_2025-02-12_224858-removebg-preview.png" id="6_dbgvb"]
 [ext_resource type="Texture2D" uid="uid://cs8u16nmgaoc" path="res://Screenshot_2025-02-13_040428-removebg-preview.png" id="6_r6o4u"]
-[ext_resource type="PackedScene" uid="uid://d0h1mfwtjlkn8" path="res://textbox.tscn" id="7_ud4oj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i6u0d"]
 
@@ -1278,9 +1276,6 @@ tile_set = SubResource("TileSet_debgc")
 use_kinematic_bodies = true
 collision_visibility_mode = 2
 
-[node name="Desk" parent="." instance=ExtResource("5_17y3i")]
-position = Vector2(-4599, -1534)
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4392, -1685)
 scale = Vector2(0.255102, 0.210247)
@@ -1305,5 +1300,3 @@ texture = ExtResource("6_dbgvb")
 position = Vector2(-1048, 79)
 scale = Vector2(0.470001, 0.424581)
 texture = ExtResource("6_dbgvb")
-
-[node name="Textbox" parent="." instance=ExtResource("7_ud4oj")]

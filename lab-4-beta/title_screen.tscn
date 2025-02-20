@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://gi6am5ojwbt1"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_rbd6c"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbd6c")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 93.0
+offset_right = 625.0
+offset_bottom = 164.0
+text = "Start"
+
+[node name="CreditButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 190.0
+offset_right = 635.0
+offset_bottom = 286.0
+text = "Credit"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 326.0
+offset_right = 651.0
+offset_bottom = 450.0
+text = "Quit"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CreditButton" to="." method="_on_credit_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
