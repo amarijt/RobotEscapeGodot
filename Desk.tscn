@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqrjq0cydpjtu"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionArea.gd" id="1_jeqlu"]
+[ext_resource type="Texture2D" uid="uid://clf2l1rqphdh3" path="res://Screenshot_2025-02-13_033129-removebg-preview.png" id="2_1d5xf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bftx"]
+size = Vector2(284, 92)
+
+[node name="Desk" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_jeqlu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(1.72907, 0.960106)
+texture = ExtResource("2_1d5xf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 17)
+shape = SubResource("RectangleShape2D_5bftx")
