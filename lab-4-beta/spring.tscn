@@ -1,19 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://v4by07fc885y"]
+[gd_scene load_steps=4 format=3 uid="uid://bxnp2yri5mlg"]
 
-[ext_resource type="Texture2D" uid="uid://t6wtlt2nextd" path="res://Screenshot_2025-02-19_171227-removebg-preview.png" id="1_22j8e"]
+[ext_resource type="Script" path="res://spring.gd" id="1_rsknd"]
+[ext_resource type="Texture2D" uid="uid://t6wtlt2nextd" path="res://Screenshot_2025-02-19_171227-removebg-preview.png" id="2_8ystr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ulvbf"]
-size = Vector2(169.864, 20.4416)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7gi0"]
+radius = 5.0
+height = 72.0
 
-[node name="Area2D" type="Area2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9.53674e-07, 0)
-scale = Vector2(0.307692, 0.289801)
-texture = ExtResource("1_22j8e")
+[node name="Spring" type="Area2D"]
+script = ExtResource("1_rsknd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 27)
-scale = Vector2(0.188034, 0.191542)
-shape = SubResource("RectangleShape2D_ulvbf")
+position = Vector2(0, 22)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_a7gi0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.393162, 0.246269)
+texture = ExtResource("2_8ystr")

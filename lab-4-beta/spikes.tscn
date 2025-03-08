@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxp2hytmmre0n"]
+
+[ext_resource type="Script" path="res://spikes.gd" id="1_hno3f"]
+[ext_resource type="Texture2D" uid="uid://c84s6kscj5fi3" path="res://Screenshot_2025-02-19_170936-removebg-preview.png" id="2_hd822"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_27417"]
+radius = 188.215
+
+[node name="Spikes" type="Area2D"]
+script = ExtResource("1_hno3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -26)
+shape = SubResource("CircleShape2D_27417")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.27374e-13, -3.8147e-06)
+scale = Vector2(1.25, 0.61875)
+texture = ExtResource("2_hd822")
+flip_v = true

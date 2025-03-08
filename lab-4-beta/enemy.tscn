@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://fu70rvbah8w7"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_d1u63"]
+[ext_resource type="Texture2D" uid="uid://b65yilqnijy1c" path="res://scientist (1).png" id="2_kr6u2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwlru"]
+size = Vector2(259, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkh2t"]
+size = Vector2(29, 53)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oelmq"]
+radius = 32.0
+
+[node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_d1u63")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 2.38419e-07)
+scale = Vector2(0.353333, 0.354749)
+texture = ExtResource("2_kr6u2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_uwlru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pkh2t")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+shape = SubResource("CircleShape2D_oelmq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

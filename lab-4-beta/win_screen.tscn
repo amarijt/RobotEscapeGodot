@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://can3i8dms0uuq"]
+
+[ext_resource type="Script" path="res://win_screen.gd" id="1_cfwki"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 39.0
+script = ExtResource("1_cfwki")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 177.0
+offset_right = 694.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 50
+text = "YOU WIN!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 99.0
+offset_right = 161.0
+offset_bottom = 142.0
+theme_override_font_sizes/font_size = 25
+text = "Restart"
+
+[node name="Quit" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 155.0
+offset_right = 162.0
+offset_bottom = 198.0
+theme_override_font_sizes/font_size = 25
+text = "QUIT"
+
+[connection signal="pressed" from="Label/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Label/Quit" to="." method="_on_quit_pressed"]

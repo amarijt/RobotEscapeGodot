@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b14yw8ti1co62"]
+
+[ext_resource type="Texture2D" uid="uid://b3eu0gnrf6tqc" path="res://Screenshot 2025-02-13 024652.png" id="1_hot5q"]
+
+[node name="WinningDoor" type="Sprite2D"]
+position = Vector2(-3.8147e-06, 2.00001)
+scale = Vector2(0.572289, 0.557034)
+texture = ExtResource("1_hot5q")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -150.0
+offset_top = -190.0
+offset_right = 204.0
+offset_bottom = -133.0
+theme_override_font_sizes/font_size = 28
+text = "Press [E] to Leave and Win
+"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfmda6e078dw5"]
+
+[ext_resource type="Script" path="res://about_screen.gd" id="1_tg1vw"]
+
+[node name="AboutScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tg1vw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -8.0
+offset_right = 1148.0
+offset_bottom = 519.0
+theme_override_font_sizes/font_size = 30
+text = "The story takes place at a factory. The scientist have created a bad batch of robots and now it is time to shut them down and turn them to scrap. Luckily, robot 3429 was not shut down properly. Help 3429 escape the evil scientist and set him free to the outside world. You can do this by finding the exit door but watch out for the scientist. 
+
+Controls: 
+A- move left
+D - move right
+W - jump "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 557.0
+offset_right = 738.0
+offset_bottom = 628.0
+theme_override_font_sizes/font_size = 25
+action_mode = 0
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
